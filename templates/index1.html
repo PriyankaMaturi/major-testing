@@ -209,7 +209,13 @@ ol li .descr { font-size: 0.8rem; font-weight: 300 }
     </div>
 <br>
 <br><br>
+    <div class="buttonstest">
+      <input type="radio" id="option1" name="options" value="option1" checked />
+      <label for="option1">Google Maps</label><br>
     
+      <input type="radio" id="option2" name="options" value="option2" />
+      <label for="option2">QR Code</label><br />
+    </div>
 
     <ol>
       <br>
@@ -266,7 +272,42 @@ ol li .descr { font-size: 0.8rem; font-weight: 300 }
     <script>
       function redirectToGoogleMaps1() {
         // Get the current location using Geolocation API
-       
+        var optionSelected = document.querySelector(
+          'input[name="options"]:checked'
+        ).value;
+
+        if (optionSelected === "option1") {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+              function (position) {
+                var latitude = position.coords.latitude;
+                var longitude = position.coords.longitude;
+
+                // Get the destination address entered by the user
+                var destinationAddress = "vvit admin block";
+
+                // Construct the Google Maps URL with current location as source and destination address
+                var googleMapsUrl =
+                  "https://www.google.com/maps/dir/?api=1&origin=" +
+                  latitude +
+                  "," +
+                  longitude +
+                  "&destination=" +
+                  encodeURIComponent(destinationAddress);
+
+                // Redirect the user to the Google Maps URL
+                window.location.href = googleMapsUrl;
+              },
+              function () {
+                // Handle errors if geolocation fails
+                alert("Error: The Geolocation service failed.");
+              }
+            );
+          } else {
+            // Browser doesn't support Geolocation
+            alert("Error: Your browser doesn't support geolocation.");
+          }
+        } else {
           var imageUrl = "{{ url_for('static', filename='images/central.png') }}";// Replace 'image_url_here' with the URL of the image you want to open
           var left = (window.innerWidth - 600) / 2; // Adjust the width of the popup as per your image size
           var top = (window.innerHeight - 400) / 2; // Adjust the height of the popup as per your image size
@@ -279,11 +320,47 @@ ol li .descr { font-size: 0.8rem; font-weight: 300 }
           // Add event listener to the document to close the popup when clicked outside of it
           document.addEventListener("click", closeImagePopupOnClickOutside);
         }
-      
+      }
 
       function redirectToGoogleMaps2() {
         // Get the current location using Geolocation API
-        
+        var optionSelected = document.querySelector(
+            'input[name="options"]:checked'
+          ).value;
+
+        if (optionSelected === "option1") {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+              function (position) {
+                var latitude = position.coords.latitude;
+                var longitude = position.coords.longitude;
+
+                // Get the destination address entered by the user
+                var destinationAddress = "vvit S & H block";
+
+                // Construct the Google Maps URL with current location as source and destination address
+                var googleMapsUrl =
+                  "https://www.google.com/maps/dir/?api=1&origin=" +
+                  latitude +
+                  "," +
+                  longitude +
+                  "&destination=" +
+                  encodeURIComponent(destinationAddress);
+
+                // Redirect the user to the Google Maps URL
+                window.location.href = googleMapsUrl;
+              },
+              function () {
+                // Handle errors if geolocation fails
+                alert("Error: The Geolocation service failed.");
+              }
+            );
+          } else {
+            // Browser doesn't support Geolocation
+            alert("Error: Your browser doesn't support geolocation.");
+          }
+        }
+        else{
           var imageUrl = "{{ url_for('static', filename='images/Block_A.png') }}";
           // Replace 'image_url_here' with the URL of the image you want to open
           var left = (window.innerWidth - 600) / 2; // Adjust the width of the popup as per your image size
@@ -297,11 +374,47 @@ ol li .descr { font-size: 0.8rem; font-weight: 300 }
           // Add event listener to the document to close the popup when clicked outside of it
           document.addEventListener("click", closeImagePopupOnClickOutside);
         }
-      
+      }
 
       function redirectToGoogleMaps3() {
         // Get the current location using Geolocation API
-        
+        var optionSelected = document.querySelector(
+            'input[name="options"]:checked'
+          ).value;
+
+        if (optionSelected === "option1") {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+              function (position) {
+                var latitude = position.coords.latitude;
+                var longitude = position.coords.longitude;
+
+                // Get the destination address entered by the user
+                var destinationAddress = "vvit civil block";
+
+                // Construct the Google Maps URL with current location as source and destination address
+                var googleMapsUrl =
+                  "https://www.google.com/maps/dir/?api=1&origin=" +
+                  latitude +
+                  "," +
+                  longitude +
+                  "&destination=" +
+                  encodeURIComponent(destinationAddress);
+
+                // Redirect the user to the Google Maps URL
+                window.location.href = googleMapsUrl;
+              },
+              function () {
+                // Handle errors if geolocation fails
+                alert("Error: The Geolocation service failed.");
+              }
+            );
+          } else {
+            // Browser doesn't support Geolocation
+            alert("Error: Your browser doesn't support geolocation.");
+          }
+        }
+            else{
               var imageUrl = "{{ url_for('static', filename='images/Block_B.png') }}";
                  // Replace 'image_url_here' with the URL of the image you want to open
               var left = (window.innerWidth - 600) / 2; // Adjust the width of the popup as per your image size
@@ -316,12 +429,48 @@ ol li .descr { font-size: 0.8rem; font-weight: 300 }
               document.addEventListener("click", closeImagePopupOnClickOutside);
             }
         
-      
+      }
 
       function redirectToGoogleMaps4() 
       {
         // Get the current location using Geolocation API
-         
+        var optionSelected = document.querySelector(
+            'input[name="options"]:checked'
+          ).value;
+
+        if (optionSelected === "option1") {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+              function (position) {
+                var latitude = position.coords.latitude;
+                var longitude = position.coords.longitude;
+
+                // Get the destination address entered by the user
+                var destinationAddress = "vvit EEE block";
+
+                // Construct the Google Maps URL with current location as source and destination address
+                var googleMapsUrl =
+                  "https://www.google.com/maps/dir/?api=1&origin=" +
+                  latitude +
+                  "," +
+                  longitude +
+                  "&destination=" +
+                  encodeURIComponent(destinationAddress);
+
+                // Redirect the user to the Google Maps URL
+                window.location.href = googleMapsUrl;
+              },
+              function () {
+                // Handle errors if geolocation fails
+                alert("Error: The Geolocation service failed.");
+              }
+            );
+          } else {
+            // Browser doesn't support Geolocation
+            alert("Error: Your browser doesn't support geolocation.");
+          }
+        }
+        else{
           var imageUrl = "{{ url_for('static', filename='images/Block_C.png') }}";
          // Replace 'image_url_here' with the URL of the image you want to open
           var left = (window.innerWidth - 600) / 2; // Adjust the width of the popup as per your image size
@@ -335,10 +484,46 @@ ol li .descr { font-size: 0.8rem; font-weight: 300 }
           // Add event listener to the document to close the popup when clicked outside of it
           document.addEventListener("click", closeImagePopupOnClickOutside);
         }
-      
+      }
       function redirectToGoogleMaps5() {
         // Get the current location using Geolocation API
- 
+        var optionSelected = document.querySelector(
+            'input[name="options"]:checked'
+          ).value;
+
+        if (optionSelected === "option1") {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+              function (position) {
+                var latitude = position.coords.latitude;
+                var longitude = position.coords.longitude;
+
+                // Get the destination address entered by the user
+                var destinationAddress = "vvit mech block";
+
+                // Construct the Google Maps URL with current location as source and destination address
+                var googleMapsUrl =
+                  "https://www.google.com/maps/dir/?api=1&origin=" +
+                  latitude +
+                  "," +
+                  longitude +
+                  "&destination=" +
+                  encodeURIComponent(destinationAddress);
+
+                // Redirect the user to the Google Maps URL
+                window.location.href = googleMapsUrl;
+              },
+              function () {
+                // Handle errors if geolocation fails
+                alert("Error: The Geolocation service failed.");
+              }
+            );
+          } else {
+            // Browser doesn't support Geolocation
+            alert("Error: Your browser doesn't support geolocation.");
+          }
+        }
+        else{
           var imageUrl = "{{ url_for('static', filename='images/Block_D.png') }}";
              // Replace 'image_url_here' with the URL of the image you want to open
           var left = (window.innerWidth - 600) / 2; // Adjust the width of the popup as per your image size
@@ -352,10 +537,46 @@ ol li .descr { font-size: 0.8rem; font-weight: 300 }
           // Add event listener to the document to close the popup when clicked outside of it
           document.addEventListener("click", closeImagePopupOnClickOutside);
         }
-      
+      }
       function redirectToGoogleMaps6() {
         // Get the current location using Geolocation API
- 
+        var optionSelected = document.querySelector(
+            'input[name="options"]:checked'
+          ).value;
+
+        if (optionSelected === "option1") {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+              function (position) {
+                var latitude = position.coords.latitude;
+                var longitude = position.coords.longitude;
+
+                // Get the destination address entered by the user
+                var destinationAddress = "vvit siemens block";
+
+                // Construct the Google Maps URL with current location as source and destination address
+                var googleMapsUrl =
+                  "https://www.google.com/maps/dir/?api=1&origin=" +
+                  latitude +
+                  "," +
+                  longitude +
+                  "&destination=" +
+                  encodeURIComponent(destinationAddress);
+
+                // Redirect the user to the Google Maps URL
+                window.location.href = googleMapsUrl;
+              },
+              function () {
+                // Handle errors if geolocation fails
+                alert("Error: The Geolocation service failed.");
+              }
+            );
+          } else {
+            // Browser doesn't support Geolocation
+            alert("Error: Your browser doesn't support geolocation.");
+          }
+        }
+        else{
           var imageUrl = "{{ url_for('static', filename='images/siemens.png') }}"; // Replace 'image_url_here' with the URL of the image you want to open
           var left = (window.innerWidth - 600) / 2; // Adjust the width of the popup as per your image size
           var top = (window.innerHeight - 400) / 2; // Adjust the height of the popup as per your image size
@@ -368,7 +589,7 @@ ol li .descr { font-size: 0.8rem; font-weight: 300 }
           // Add event listener to the document to close the popup when clicked outside of it
           document.addEventListener("click", closeImagePopupOnClickOutside);
         }
-      
+      }
       document
         .getElementById("mobile-menu")
         .addEventListener("click", function () {
